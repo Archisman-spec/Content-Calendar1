@@ -19,4 +19,23 @@ Content-Type: application/json
   "url": ""
 }
 
+###
+PUT http://localhost:8080/api/content/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "ARCH BLOG POST",
+  "desc": "My 1st post",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2024-12-15T17:41:42.802905401",
+  "dateUpdated": "2024-12-15T17:41:42.802905401",
+  "url": "http://localhost:8080/arch-blog-post"
+}
+
+###
+DELETE http://localhost:8080/api/content/2
+
+
 

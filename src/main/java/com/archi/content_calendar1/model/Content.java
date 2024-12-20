@@ -2,9 +2,11 @@ package com.archi.content_calendar1.model;
 
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.time.LocalDateTime;
 
+@Table
 public record Content(
         @Id
         Integer id,
@@ -18,3 +20,4 @@ public record Content(
         String url
 ) {
 }
+

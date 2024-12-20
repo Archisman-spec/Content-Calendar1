@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS Content (
+CREATE TABLE Content (
     id INTEGER AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
     desc text,

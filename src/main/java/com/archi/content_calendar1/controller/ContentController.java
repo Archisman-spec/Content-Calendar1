@@ -1,6 +1,7 @@
 package com.archi.content_calendar1.controller;
 
 import com.archi.content_calendar1.model.Content;
+import com.archi.content_calendar1.model.Status;
 import com.archi.content_calendar1.repository.ContentCollectionRepository;
 import com.archi.content_calendar1.repository.ContentRepository;
 import jakarta.validation.Valid;
@@ -49,6 +50,18 @@ public class ContentController {
     public void delete(@PathVariable Integer id){
         repository.deleteById(id);
     }
+
+    @GetMapping("/filter/{keyword}")
+    public List<Content> findByTitle(@PathVariable String keyword){
+        return repository.findAllByTitleContains(keyword);
+    }
+
+    @GetMapping("/filter/status/{status}")
+    public List<Content> findByStatus(@PathVariable Status status){
+        return repository.listByStatus(status);
+    }
+
+
 
 
 

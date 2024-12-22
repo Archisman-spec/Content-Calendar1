@@ -18,20 +18,6 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
-	@Bean
-	CommandLineRunner commandLineRunner(ContentRepository repository){
-		return args -> {
-			Content content = new Content(null,
-					"Arch blog post",
-					"My 2nd blog post",
-					Status.IDEA,
-					Type.VIDEO,
-					LocalDateTime.now(),
-					null,
-					"");
 
-			repository.save(content);
-		};
-	}
 
 }

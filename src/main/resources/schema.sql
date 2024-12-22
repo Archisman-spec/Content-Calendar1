@@ -1,7 +1,7 @@
 CREATE TABLE Content (
     id INTEGER AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
-    desc text,
+    description text,
     status VARCHAR(20) NOT NULL,
     content_type VARCHAR(50) NOT NULL,
     date_created TIMESTAMP NOT NULL,
